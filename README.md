@@ -6,3 +6,5 @@
 
   - Start the simple spider:
     ```scrapy crawl simple -a allowed_domains="toscrape.com,scrapinghub.com"```
+
+  - Start url is configured in settings.py  

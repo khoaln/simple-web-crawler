@@ -91,3 +91,14 @@ ROBOTSTXT_OBEY = True
 
 # The start URL
 START_URL = 'http://quotes.toscrape.com'
+
+# MongoDB
+MONGO_URI = '127.0.0.1'
+MONGO_DATABASE = 'simple_crawler'
+
+# Filters
+DUPEFILTER_CLASS = 'simplecrawler.filters.VisitedSiteFilter'
+
+# Logging
+LOG_FILE = 'simplecrawler/logs/app.log'
+DUPEFILTER_DEBUG = True
