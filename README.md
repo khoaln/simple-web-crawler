@@ -2,9 +2,20 @@
 
   - Install the packages:
     
-    ```pip install -r requirements.txt```
+    ```
+    pip install -r requirements.txt
+    ```
 
   - Start the simple spider:
-    ```scrapy crawl simple -a allowed_domains="toscrape.com,scrapinghub.com"```
+
+    ```
+    cd simplecrawler
+    scrapy crawl simple -a allowed_domains="toscrape.com,scrapinghub.com"
+    ```
 
   - Start url is configured in settings.py  
+  - Test the filter:
+
+    ```
+    python -m unittest simplecrawler.tests.filters
+    ```
