@@ -7,8 +7,8 @@
 
 import scrapy
 
-
-class SimplecrawlerItem(scrapy.Item):
-    # define the fields for your item here like:
-    # name = scrapy.Field()
-    pass
+class SimpleItem(scrapy.Item):
+    
+  page_title = scrapy.Field()
+  image_urls = scrapy.Field()
+  images = scrapy.Field()

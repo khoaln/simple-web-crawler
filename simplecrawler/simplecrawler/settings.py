@@ -67,6 +67,12 @@ ROBOTSTXT_OBEY = True
 #ITEM_PIPELINES = {
 #    'simplecrawler.pipelines.SimplecrawlerPipeline': 300,
 #}
+ITEM_PIPELINES = {
+  'simplecrawler.pipelines.JsonWriterPipeline': 10,
+  'simplecrawler.pipelines.SimpleImagePipeline': 20,
+}
+IMAGES_STORE = 'simplecrawler/media/images'
+MEDIA_ALLOW_REDIRECTS = True
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
@@ -90,7 +96,7 @@ ROBOTSTXT_OBEY = True
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # The start URL
-START_URL = 'http://quotes.toscrape.com'
+START_URL = 'https://dooa.no/'
 
 # MongoDB
 MONGO_URI = '127.0.0.1'
@@ -102,3 +108,6 @@ DUPEFILTER_CLASS = 'simplecrawler.filters.VisitedSiteFilter'
 # Logging
 LOG_FILE = 'simplecrawler/logs/app.log'
 DUPEFILTER_DEBUG = True
+
+# Output
+JSON_OUTPUT_PATH = 'simplecrawler/output/data.json'
