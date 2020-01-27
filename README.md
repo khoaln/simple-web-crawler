@@ -24,3 +24,8 @@
     ```
     scrapy crawl simple -a allowed_domains="toscrape.com,scrapinghub.com" -s JOBDIR=crawls/simple-1
     ```
+  - Download images of cat:
+
+    ```
+    scrapy crawl simple -a allowed_domains="dooa.no" -s JOBDIR=crawls/simple-1 -a search=katt
+    ```
