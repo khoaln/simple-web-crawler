@@ -34,7 +34,7 @@ The assignment is implemented using [Scrapy](https://scrapy.org/) framework. It 
 ### Discussion:
   - Using Scrapy can build a high performance crawler since it uses asynchronous system calls. Scrapy provides lots of useful features such as proxies, data pipeline, etc. It's also customizable and extensible. One disadvantage compared to building from scratch is that we have to rely on third party framework, truly understand it in order to customize.
   - The current implementation can get banned by the websites. To improve it, we can add middlewares to rotate the user agent and IP when making the requests.
-  - The current approach can miss some relevant images. We can improve by searching for the text around the <img> tag.
+  - The current approach can miss some relevant images. We can improve by also searching for the text around the image tag.
   - This solution can be scaled for a distributed environment:
     - If we have to crawl from many domains, we can partition the domain list and have one crawler instance to process each part. The crawlers can run on different servers. We can implement the Master-Slave model whereas each crawler is a slave. The following requests will be sent to the Master and the Master can control which slave to process them based on the requested domain.
     - MongoDB can be hosted on a separate server so all crawlers can persist the data and access to check visited urls.
