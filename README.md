@@ -13,7 +13,7 @@ The assignment is implemented using [Scrapy](https://scrapy.org/) framework. It 
   - From the root folder, enter the `simplecrawler` subfolder before running commands.
   - Start the simple crawler with a command as follow:
     ```
-    scrapy crawl simple -a allowed_domains="dooa.no,dyreklinikk.no" -s JOBDIR=crawls/simple-1 -a search=katt
+    scrapy crawl simple -a allowed_domains="dooa.no,dyreklinikk.no" -a search=katt -s JOBDIR=crawls/simple-1
     ```
   - The start URL is configured in `settings.py`
   - In order to restrict the traversal by one or several domains, add the allowed_domains argument to the command: `-a allowed_domains="dooa.no,dyreklinikk.no"`
