@@ -39,3 +39,7 @@ The assignment is implemented using [Scrapy](https://scrapy.org/) framework. It 
     - If we have to crawl from many domains, we can partition the domain list and have one crawler instance to process each part. The crawlers can run on different servers. We can implement the Master-Slave model whereas each crawler is a slave. The following requests will be sent to the Master and the Master can control which slave to process them based on the requested domain.
     - MongoDB can be hosted on a separate server so all crawlers can persist the data and access to check visited urls.
     - Instead of storing downloaded images locally, the crawlers can upload them to Amazon S3 or Google Cloud with Scrapy built-in feature supports.
+
+### Reference
+  - Scrapy 1.8 documentation, 2018, https://docs.scrapy.org/en/latest/index.html.
+  - Yuhao Fan, 2018 IOP Conf. Ser.: Earth Environ. Sci. 108 042086, Design and Implementation of Distributed Crawler System Based on Scrapy.
