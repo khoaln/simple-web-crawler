@@ -7,6 +7,8 @@ The assignment is implemented using [Scrapy](https://scrapy.org/) framework. It 
     ```
     pip install -r requirements.txt
     ```
+  - Python 3.7.3
+  - MongoDB 4.2.2 . Create a database with name `simple_crawler`. If you use another name, please also update the relative setting in `settings.py`.
   - Create some necessary folders under "simplecrawler/simplecrawler":  `logs`, `media/images`, `output`. You can find and change the name of the folders in `settings.py`.
 
 ### Features:
